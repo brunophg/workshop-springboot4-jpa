@@ -1,4 +1,4 @@
-package com.brunophg.workshop_springboot_jpa;
+package com.org.workshop_springboot_jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
