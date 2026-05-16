@@ -2,9 +2,8 @@ package com.org.workshop_springboot_jpa.services;
 
 import com.org.workshop_springboot_jpa.entities.User;
 import com.org.workshop_springboot_jpa.repositories.UserRepository;
+import com.org.workshop_springboot_jpa.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +21,7 @@ public class UserService {
 
     public User findById(Long id) {
         Optional<User> obj = repository.findById(id);
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User user) {

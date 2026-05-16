@@ -1,7 +1,6 @@
 package com.org.workshop_springboot_jpa.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.org.workshop_springboot_jpa.entities.enums.OrderStatus;
 import jakarta.persistence.*;
 
